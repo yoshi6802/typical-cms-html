@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+
+header{
+		width:100%;
+		min-width:450px;
+		padding:12px 0 12px 0;
+		margin:0 0 50px 0;
+		display: inline-block;
+		color: #000;
+		letter-spacing: 0;
+		border: none;
+		box-shadow: none;
+		border-top:10px solid #000;
+		text-decoration: none;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #fed44e), color-stop(0.00, #f5a100));
+		background: -webkit-linear-gradient(#f5a100, #fed44e);
+		background: -moz-linear-gradient(#f5a100, #fed44e);
+		background: -o-linear-gradient(#f5a100, #fed44e);
+		background: -ms-linear-gradient(#f5a100, #fed44e);
+		background: linear-gradient(#f5a100, #fed44e);
+		-pie-background: linear-gradient(#f5a100, #fed44e);
+		behavior: url(common/pie/PIE.htc);
+	}
+
+p.logo{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		padding:0 0 0 15px;
+}
+
+.date{
+	width:50%;
+	min-width:450px;
+	margin:0 auto 0 auto;
+	font-size:12px;
+	line-height:14px;
+	text-align:right;
+	}
+
+article{
+		width:50%;
+		min-width:450px;
+		margin:0 auto 120px auto;
+		padding:0;
+	}
+
+article table.TableA{
+	width:100%;
+	text-align:left;
+	border-top:1px solid #CCC;
+	border-left:1px solid #CCC;
+	background:#f6f6f6;
+	margin:0 0 20px 0;
+	}
+
+article table.TableA td{
+	border-top:1px solid #fff;
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #fff;
+	border-right:1px solid #ccc;
+	padding:10px 10px;
+	}
+
+article table.TableA th{
+	border-top:1px solid #6b6b6b;
+	border-bottom:1px solid #000;
+	border-left:1px solid #6b6b6b;
+	border-right:1px solid #000;
+	background:#585858;
+	color:#FFF;	
+	padding:3px 10px;
+	}
+
+
+h1{
+	width:50%;
+	min-width:450px;
+	margin:0 auto 10px auto;
+	font-size:24px;
+	line-height:36px;
+	font-weight:bold;
+	display:block;
+	}
+
+
+
+
+/*-------------------
+角丸ボタン
+--------------------*/
+a.btn01{
+    background-image:-moz-linear-gradient(top, #FAD502, #E89502);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FAD502), to(#E89502), color-stop(1,#E89502));
+		padding:10px;
+		margin:0 auto 20px auto;
+		width:150px;
+		display:block;
+		text-align:center;
+		text-decoration:none;
+		color:#000;
+		text-shadow: 1px 1px 1px #ffe467;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*-------------------
+コピーライト
+--------------------*/
+footer{
+	min-width:450px;
+	font-size:10px;
+	color:#000000;
+	text-align:center;
+	border-top:1px solid #CCC;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:15px 0;
+	}

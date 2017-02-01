@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>地域VC編集</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/non-responsive.css" rel="stylesheet">
+
+        <link href="add/css/moon.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="wrapper" style="width:1000px; margin:0 auto;">
+
+            <header class="g-header">
+
+                <div class="header-over row mT10 mB10">
+                    <div class="col-xs-6"><img src="add/images/common/logo.png" alt="TVAC    "></div>
+                    <div class="col-xs-4" style="padding-top: 10px;"><i class="glyphicon glyphicon-user mR5"></i><span class="mR10">田中一郎 さま</span><span>yyyy.mm.dd 00:00</span></div>
+                      <div class="col-xs-2">
+                            <button class="btn btn-lg f-right" style="width:150px;"><span>ログアウト</span></button>
+                            </div>
+                </div>
+
+
+               <!-- gMenu -->
+                <div class="row gMenu">
+                <ul class="col-xs-12">
+                    <li><a href="k_top.html" class="">TOP</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">TVACニュース管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_news_top.html">ニュース一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">デイリー情報管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_daily_correct.html">修正依頼</a></li>
+                            <li><a href="k_daily_request.html">掲載依頼</a></li>
+                            <li><a href="k_daily_await.html">掲載待ち</a></li>
+                            <li><a href="k_daily_top.html">掲載中</a></li>
+                            <li><a href="k_daily_end.html">掲載終了</a></li>
+                            <li><a href="k_daily_exclusion.html">除外</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle on" data-toggle="dropdown">団体管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_dantai_top.html">団体一覧</a></li>
+                            <li><a href="k_chiikivc_top.html">地域VC一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理メニュー</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_staff_top.html">スタッフ管理</a></li>
+                            <li><a href="k_osirase_top.html">お知らせ新規・編集</a></li>
+                            <li><a href="k_status.html">更新情報</a></li>
+                            <li><a href="k_pass.html">パスワード変更</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div><!-- /gMenu -->
+
+            </header>
+
+            <div class="container-fluid">
+                <ol class="breadcrumb mB10">
+                    <li class="active">団体管理</li>
+                    <li class=""><a href="k_chiikivc_top.html">地域VC一覧</a></li>
+                    <li class="active">地域VC編集</li>
+                </ol>
+                <div class="row edit-head" style="padding-bottom:10px;">
+                    <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                        <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                    </div>
+                </div>
+
+                        <h2 class="h2">地域VC編集</h2>
+
+                    <div class="row clearB">
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">団体ID</th>
+                                <td class="col-xs-10 align-left">自動でIDがふられます</td>
+                            </tr>
+                            <tr>
+                                <th>最終更新日</th>
+                                <td class="align-left">yyyy-mm-dd 00:00（自動）</td>
+                            </tr>
+                            <tr>
+                                <th>メモ</th>
+                                <td class="align-left"><textarea class="form-control" id="" placeholder="" style="width:100%; height:100px"></textarea>
+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>▼表示用項目</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">団体名</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">フリガナ</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">検索用別名</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">英略称</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">住所</th>
+                                <td class="col-xs-10 align-left">
+                                〒<input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:20%; margin:0 5px 10px 5px;"><button class="mR10" style="width:90px; background-color: #ddd;"><span style="color:#000; font-size:14px">自動入力</span></button><br>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">TEL</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:40%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">FAX</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:40%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">Email</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ウェブサイトURL</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">種別</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ボランティア・市民活動団体（法人格なし）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">NPO法人（取得予定もふくむ）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ボランティア・市民活動センター/NPO支援センター</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">財団法人/社団法人/社会福祉法人</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">企業</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">大学・研究機関</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">小・中・高等学校</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">自治体/官公庁</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">その他</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">不詳</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">活動テーマ</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">環境・まちづくり</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">いのち・人権</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">国際</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">高齢者</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">障がい者</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">子ども・若者</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">貧困</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">女性</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">病院・病気</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">文化・スポーツ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">NPO・NGO支援</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">動物</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">災害・被災地支援</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">セルフヘルプ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">その他</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">キーワード</th>
+                                <td class="col-xs-10 align-left">
+                                    <textarea class="form-control" id="" placeholder=""></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>▼TVACからの連絡先</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">TEL</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:40%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">Email</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <p>▼以下地域ボランティア独自の情報</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">分類</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">都内の広域推進・支援機関</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">地域の推進・支援窓口 （23区）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">推進・支援窓口 （多摩）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">推進・支援窓口 （島しょ）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">推進・支援窓口 （全国）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">全国のNPO支援センター</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">地域</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">千代田区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">中央区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">港区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">新宿区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">文京区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">台東区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">墨田区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">江東区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">品川区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">目黒区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">大田区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">世田谷区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">渋谷区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">中野区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">杉並区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">豊島区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">北区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">荒川区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">板橋区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">練馬区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">足立区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">葛飾区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">江戸川区</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">八王子市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">立川市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">武蔵野市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">三鷹市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">青梅市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">府中市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">昭島市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">調布市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">町田市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">小金井市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">小平市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">日野市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">東村山市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">国分寺市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">国立氏</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">西東京市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">福生市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">狛江市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">東大和市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">清瀬市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">東久留米市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">武蔵村山市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">多摩市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">稲城市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">羽村市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">あきる野市</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">瑞穂町</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">日の出町</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">檜原村</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">奥多摩町</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">大島町</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">三宅村</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">御蔵島</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">八丈町</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">青ヶ島</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">小笠原</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">新島村</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">神津島</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">利島村</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">東京都外</span></label>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <p>▼アクセス・時間など</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">もより駅など</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">開所曜日・時間</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ブランチなど</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>▼貸出スペース</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">スペースの種類と定員</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">その他（具体的に）</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">貸出時間</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">利用料</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <p>▼貸出し機材など</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">コピー機</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">プリンター</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">カラープリンター</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">点字プリンター</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">大判コピー</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">メールボックス</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ロッカー</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS mR10" id="" placeholder="" style="width:10%;">台
+                                <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">無料</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有料</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">Wi-Fi</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">有り</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">無し</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">上記以外の貸出し用器材にチェックを入れてください</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">パソコン</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ビデオデッキ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ビデオテープ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ビデオプロジェクター</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">録音機材</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">テレビ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">DVDプレイヤー</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">CDプレイヤー</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">スクリーン</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">シニアシュミレータなど</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">白杖</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">車いす</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">紙折り機</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">図書</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">録音機材</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">点字器</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">OHP</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">OHC</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">福祉車両</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">テント</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">その他の貸出品目</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">貸出時間</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">公開・非公開</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">公開</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">限定（公開せず、URLを知っている人だけが見られる）</span></label>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                        <div class="row edit-head" style="padding-bottom:10px;">
+                            <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                                <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                            </div>
+                        </div>
+
+        <!-- モーダル・ダイアログ -->
+        <div class="modal fade" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top:300px;">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body" style="text-align:center; padding:15px 0 30px; font-size:20px;">
+                        記事を更新しました
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                </div>
+                </div>
+                </div>
+   <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://bootstrap3.cyberlab.info/jquery/jquery-1.11.2.min.js"></script>
+        <script src="http://bootstrap3.cyberlab.info/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="http://bootstrap3.cyberlab.info/bootstrap/assets/js/docs.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="http://bootstrap3.cyberlab.info/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+        <script type="text/javascript" src="http://bootstrap3.cyberlab.info/jquery/misc.js"></script>
+        <script type="text/javascript" src="http://bootstrap3.cyberlab.info/jquery/animatescroll.js-master/animatescroll.noeasing.js"></script>
+
+    </body>
+ </html>

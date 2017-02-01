@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ニュース編集</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/non-responsive.css" rel="stylesheet">
+
+        <link href="add/css/moon.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="wrapper" style="width:1000px; margin:0 auto;">
+
+            <header class="g-header">
+
+                <div class="header-over row mT10 mB10">
+                    <div class="col-xs-6"><img src="add/images/common/logo.png" alt="TVAC"></div>
+                    <div class="col-xs-4" style="padding-top: 10px;"><i class="glyphicon glyphicon-user mR5"></i><span class="mR10">田中一郎 さま</span><span>yyyy.mm.dd 00:00</span></div>
+                      <div class="col-xs-2">
+                            <button class="btn btn-lg f-right" style="width:150px;"><span>ログアウト</span></button>
+                            </div>
+                </div>
+
+
+               <!-- gMenu -->
+                <div class="row gMenu">
+                <ul class="col-xs-12">
+                    <li><a href="k_top.html" class="">TOP</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle on" data-toggle="dropdown">TVACニュース管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_news_top.html">ニュース一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">デイリー情報管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_daily_correct.html">修正依頼</a></li>
+                            <li><a href="k_daily_request.html">掲載依頼</a></li>
+                            <li><a href="k_daily_await.html">掲載待ち</a></li>
+                            <li><a href="k_daily_top.html">掲載中</a></li>
+                            <li><a href="k_daily_end.html">掲載終了</a></li>
+                            <li><a href="k_daily_exclusion.html">除外</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">団体管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_dantai_top.html">団体一覧</a></li>
+                            <li><a href="k_chiikivc_top.html">地域VC一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理メニュー</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_staff_top.html">スタッフ管理</a></li>
+                            <li><a href="k_osirase_top.html">お知らせ新規・編集</a></li>
+                            <li><a href="k_status.html">更新情報</a></li>
+                            <li><a href="k_pass.html">パスワード変更</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div><!-- /gMenu -->
+
+            </header>
+
+            <div class="container-fluid">
+                        <div class="message-box message-red mL0 mR0 mB10">
+                            <ul class="error-list">
+                                <li>エラーメッセージ</li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb mB10">
+                            <li class="active">TVACニュース管理</li>
+                            <li><a href="k_news_top.html">ニュース一覧</a></li>
+                            <li class="active">ニュース一覧</li>
+                        </ol>
+                <div class="row edit-head" style="padding-bottom:10px;">
+                    <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                        <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                    </div>
+                </div>
+
+                        <h2 class="h2">ニュース編集</h2>
+
+                    <div class="row clearB">
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">記事ID</th>
+                                <td class="col-xs-10 align-left">これが記事IDとなります。（自動表示）<br>39482</td>
+                            </tr>
+                            <tr>
+                                <th>最終更新日</th>
+                                <td class="align-left">yyyy-mm-dd 00:00（自動表示）</td>
+                            </tr>
+                            <tr>
+                                <th>メモ</th>
+                                <td class="align-left"><textarea class="form-control" id="" placeholder="" style="width:100%; height:100px"></textarea>
+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>▼表示用項目</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">記事タイトル<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:80px"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">記事タイトル<span class="hissu">必須</span><br>（短縮版）</th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">リダイレクト</th>
+                                <td class="col-xs-10 align-left"><p>このページではなく別のページを表示する時に、該当するURLを入力してください。</p><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">本文<span class="hissu">必須</span>
+                                    <p style="display:inline;" data-toggle="popover" data-placement="top" data-html="true" title="・改行で幅をそろえる必要はありません。<br>
+                                    ・大見出し、中見出し、小見出し、箇条書きはそれぞれ「■」「●」「○」「・（ナカグロ）」を行頭につけてください。<br>
+                                    ・【】ではさむと、その部分は太字になります。【【】】だと赤太字。<br>
+                                    ・画像は[1.当日の様子] のように、[ ] でくくって、「番号+ドット+画像の説明」の形で表します。<br>
+                                    ※画像はあらかじめ適当な大きさに加工しておいてください。<br>
+                                    ・リンクは「{つなぎあい→ http://tsunagi-i.net/}」のように、{ 表示する言葉→ URL } の形で。<br>
+                                    ※ 「講師: 山崎美貴子」のように字間を空けていると「山崎美貴子」で検索することができません。<br>
+                                    余裕があれば、重要な単語だけでも字間のスペースを削除してあげてください。"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p>
+                                </th>
+                                <td class="col-xs-10 align-left">
+                                <textarea class="form-control" id="" placeholder="" style="height:300px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">トピックス用要約文</th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">キーワード<p style="display:inline;" data-toggle="popover" data-placement="top" data-html="true" title="「、」 で区切っていくつでも入力してください （ただし全角120文字ぐらいまで）。<br>
+                                    カッコを使うとエラーになります！ 「募金（セーター）」 は× 「募金、セーター」 が○"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">カテゴリー<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">お知らせ</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">レポート</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">情報誌ネットワーク</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">講座</span></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">講座・イベント</th>
+                                <td class="col-xs-10 align-left">
+                                <p>デイリー情報にも掲載する場合は、選んでください。</p>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">講座・イベント</span></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">署名</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">担当者名をつかう</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">相談担当</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">『ネットワーク』編集部</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">情報担当</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">スタッフ一同</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">TVAC</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">東京ボランティア・市民活動センター 所長 山崎美貴子</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">助成金額の上限</th>
+                                <td class="col-xs-10 align-left"><p>以下は今のところ 「ゆめ応援ファンド」 専用の項目です。</p><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">助成対象</th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+
+
+                    <p>▼画像30点、添付ファイル30点まで指定してアップロードできます。<br>
+※【画像サイズ】 画像類はあらかじめ400ピクセル以下に縮小しておいてください。</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">画像1</th>
+                                <td class="col-xs-10 align-left"><p>本文中 [1.○○○○] の部分に表示したい画像をここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像2</th>
+                                <td class="col-xs-10 align-left"><p>本文中 [2.○○○○] の部分に表示したい画像をここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像3</th>
+                                <td class="col-xs-10 align-left"><p>本文中 [3.○○○○] の部分に表示したい画像をここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像4</th>
+                                <td class="col-xs-10 align-left"><p>本文中 [4.○○○○] の部分に表示したい画像をここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像5</th>
+                                <td class="col-xs-10 align-left"><p>本文中 [5.○○○○] の部分に表示したい画像をここで指定してください。<br>
+                                ※より多くの画像をアップしたい場合はこちら →　<a href=""><button class="mR10" style="width:160px; background-color: #ddd;"><span style="color:#000; font-size:14px">もっとアップしたい！</span></button></a>
+</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">添付ファイル1</th>
+                                <td class="col-xs-10 align-left"><p>本文中の {1.○○○○} でリンクする添付ファイルをここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">添付ファイル2</th>
+                                <td class="col-xs-10 align-left"><p>本文中の {2.○○○○} でリンクする添付ファイルをここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">添付ファイル3</th>
+                                <td class="col-xs-10 align-left"><p>本文中の {3.○○○○} でリンクする添付ファイルをここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">添付ファイル4</th>
+                                <td class="col-xs-10 align-left"><p>本文中の {4.○○○○} でリンクする添付ファイルをここで指定してください。</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">添付ファイル5</th>
+                                <td class="col-xs-10 align-left"><p>本文中の {5.○○○○} でリンクする添付ファイルをここで指定してください。<br>
+                                ※より多くの画像をアップしたい場合はこちら →　<a href=""><button class="mR10" style="width:160px; background-color: #ddd;"><span style="color:#000; font-size:14px">もっとアップしたい！</span></button></a>
+</p>
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <p>▼掲載項目</p>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">ウェブ掲載</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">公開</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                <label class=""><input type="radio" name="r1" id=""> <span class="fontN">限定（公開せず、URLを知っている人だけが見られる）</span></label>
+</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">掲載日時<p style="display:inline;" data-toggle="popover" data-placement="top" data-html="true" title="入力例）「2015-12-19」 あるいは 「2015-12-19 10:30」<br>
+                                    「今から掲載」をクリックすると、すぐに掲載されます。"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%; margin-right:5px">
+                                <a href=""><button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">今から掲載</span></button></a></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ピックアップ</th>
+                                <td class="col-xs-10 align-left">
+                                <p>中央最上部の特設ゾーンに表示されます。</p>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">掲載しない</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">掲載する</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">掲載する（色つき）</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">動画を掲載する</span></label>
+</td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">今日のトピックス<p style="display:inline;" data-toggle="popover" data-placement="top" data-html="true" title="「今日のトピックス」 に掲載したい場合、掲載開始日時を入力してください。<br>
+                                    入力例）「2015-12-19」 あるいは 「2015-12-19 10:30」"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%; margin-right:5px">
+                                <a href=""><button class="mR10" style="width:150px; background-color: #ddd;"><span style="color:#000; font-size:14px">「掲載日時」と同じ</span></button></a></td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">掲載期限</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%; margin-right:5px">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">配信期限</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%; margin-right:5px">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                        <div class="row edit-head" style="padding-bottom:10px;">
+                            <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                                <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                            </div>
+                        </div>
+
+
+        <!-- モーダル・ダイアログ -->
+        <div class="modal fade" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top:300px;">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body" style="text-align:center; padding:15px 0 30px; font-size:20px;">
+                        記事を更新しました
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+                </div>
+                </div>
+                </div>
+
+
+    </body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $(function() {
+            $(".datepicker").datepicker();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $(".datepicker").datepicker();
+            $(".datepicker").datepicker("option", "showOn", 'both');
+            $(".datepicker").datepicker("option", "buttonImageOnly", true);
+            $(".datepicker").datepicker("option", "buttonImage", './add/images/common/ico_calendar.png');
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+        })
+    </script>
+
+ </html>

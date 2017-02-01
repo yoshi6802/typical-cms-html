@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>記事編集</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/non-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
+        <link href="add/css/moon.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="wrapper" style="width:1000px; margin:0 auto;">
+
+            <header class="g-header">
+
+                <div class="header-over row mT10 mB10">
+                    <div class="col-xs-6"><img src="add/images/common/logo.png" alt="TVAC"></div>
+                    <div class="col-xs-4" style="padding-top: 10px;"><i class="glyphicon glyphicon-user mR5"></i><span class="mR10">田中一郎 さま</span><span>yyyy.mm.dd 00:00</span></div>
+                      <div class="col-xs-2">
+                            <button class="btn btn-lg f-right" style="width:150px; background:#818181; color:#FFF;"><span>ログアウト</span></button>
+                            </div>
+                </div>
+
+
+               <!-- gMenu -->
+                <div class="row gMenu">
+                <ul class="col-xs-12">
+                    <li><a href="k_top.html" class="">TOP</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">TVACニュース管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_news_top.html">ニュース一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle on" data-toggle="dropdown">デイリー情報管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_daily_correct.html">修正依頼</a></li>
+                            <li><a href="k_daily_request.html">掲載依頼</a></li>
+                            <li><a href="k_daily_await.html">掲載待ち</a></li>
+                            <li><a href="k_daily_top.html">掲載中</a></li>
+                            <li><a href="k_daily_end.html">掲載終了</a></li>
+                            <li><a href="k_daily_exclusion.html">除外</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">団体管理</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_dantai_top.html">団体一覧</a></li>
+                            <li><a href="k_chiikivc_top.html">地域VC一覧</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理メニュー</a>
+                        <ul class="dropdown-menu" style="padding:0; border-radius: 0px; margin:0;" >
+                            <li><a href="k_staff_top.html">スタッフ管理</a></li>
+                            <li><a href="k_osirase_top.html">お知らせ新規・編集</a></li>
+                            <li><a href="k_status.html">更新情報</a></li>
+                            <li><a href="k_pass.html">パスワード変更</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div><!-- /gMenu -->
+
+            </header>
+
+            <div class="container-fluid">
+                <div class="row edit-head" style="padding-bottom:10px;">
+                    <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                        <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                    </div>
+                </div>
+
+                        <h2 class="h2">デイリー情報</h2>
+
+                    <div class="row clearB">
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">情報ID</th>
+                                <td class="col-xs-10 align-left">39482</td>
+                            </tr>
+                            <tr>
+                                <th>投稿日</th>
+                                <td class="align-left">yyyy-mm-dd 00:00</td>
+                            </tr>
+                            <tr>
+                                <th>最終更新日</th>
+                                <td class="align-left">yyyy-mm-dd 00:00</td>
+                            </tr>
+                            <tr>
+                                <th>メモ</th>
+                                <td class="align-left"><textarea class="form-control" id="" placeholder="" style="width:100%; height:100px"></textarea>
+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>▼表示用項目</p>
+                    <table class="table table-bordered table-striped" style="margin:0;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">情報区分</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ボランティア募集</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">講座・イベント</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">ワークキャンプ・スタディツアー</span></label><br>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">助成金</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">寄付・募金・購入</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">インターン・スタッフ募集</span></label>
+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <table class="table table-bordered" style="margin:0; background:#e1e6e6;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-12">▽基本情報</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped" style="margin:0;">
+                        <tbody class="group-table-body">
+
+                            <tr>
+                                <th class="col-xs-2">正式タイトル<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:70px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">短縮タイトル<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:50px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">開催日時<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <div class="mB10">日にち<input type="text" name="" class="form-control form-sizeS datepicker" style="margin:0 10px 0 15px;"></div>
+                                <div class="mB10">時間<input type="text" name="" class="form-control form-sizeS" style="margin:0 10px 0 29px;"></div>
+                                    <div class="mB10">備考欄<span class="red mL10">※検索対象にはなりませんのでご注意ください。</span>
+                                        <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;"></div>
+                                    </td>
+                            </tr>
+
+                            <tr>
+                                <th class="col-xs-2">活動場所1<span class="hissu">必須</span><br>（地区選択）</th>
+                                <td class="col-xs-10 align-left">
+                                <p>※最大5箇所まで選べます。（以下五十音順）</p>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">青ヶ島村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">昭島市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">あきる野市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">足立区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">荒川区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">板橋区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">稲城市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">江戸川区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">青梅市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">大島町</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">大田区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">小笠原村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">奥多摩町</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">葛飾区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">北区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">清瀬市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">神津島村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">江東区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">国立市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">小金井市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">国分寺市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">小平市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">狛江市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">品川区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">大田区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">渋谷区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">新宿区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">杉並区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">墨田区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">世田谷区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">台東区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">立川市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">多摩市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">中央区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">調布市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">千代田区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">豊島区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">利島村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">中野区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">新島村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">西東京市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">練馬区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">八王子市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">八丈町</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">羽村市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">東久留米市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">東村山市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">東大和市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">日野市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">日の出町</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">檜原村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">府中市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">福生市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">文京区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">町田市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">御蔵島村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">瑞穂町</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">三鷹市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">港区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">三宅村</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">武蔵野市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">武蔵村山市</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">目黒区</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">東京都外</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">海外</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">不特定</span></label>
+                                    <label class="mR15"><input type="checkbox" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th class="col-xs-2">活動場所2<span class="hissu">必須</span><br>（会場名）</th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:40px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">趣旨<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:40px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">内容<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder="" style="height:150px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">対象</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">勤務日数・時間<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                    <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">給与<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="※時間、日で入力してください。<br>
+例）1時間あたり1,000円／1日あたり5,000円／0円"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p><span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                    <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">助成上限<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left"><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">自由記述欄</th>
+                                <td class="col-xs-10 align-left">補足事項など自由に使ってください。<br><textarea class="form-control" id="" placeholder=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">申込み方法<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">TEL</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">FAX</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">Email</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">郵便</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">その他</span></label><br>
+                                番号や送り先は以下に入力してください。<br>
+                                <textarea class="form-control" id="" placeholder=""></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">申込み期限</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" name="" class="form-control form-sizeS datepicker" style="margin:0 10px 0 0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ワンポイントチェック</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">「1日だけ参加」も可</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">土日参加可</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">1時間～可</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">午後6時以降可</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">自宅でできる</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">初心者歓迎</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">中高生歓迎</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">親子歓迎</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">見学・体験歓迎</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">外国語対応可</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">話し相手・傾聴</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">事務作業</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">スポーツ・アウトドア</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">趣味・スキルを活かす</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">キーワード</th>
+                                <td class="col-xs-10 align-left"><input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像</th>
+                                <td class="col-xs-10 align-left"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">PDF</th>
+                                <td class="col-xs-10 align-left"></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">この情報に関するお問合わせ先<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                        <table class="table table-bordered" style="margin:0; background:#e1e6e6;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-12">▽団体基本情報</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped" style="margin:0;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">団体ID<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="※団体の登録がない場合には、団体基本情報をそれぞれ入力してください。<br>※団体名や連絡先を書き替えたときは、一度 [登録ボタン] で保存してから団体情報と連携してください。"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:20%; margin-right:5px">
+                                <a href=""><button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">団体情報と連携</span></button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">団体名<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">活動テーマ<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">環境・まちづくり</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">いのち・人権</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">国際</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">高齢者</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">障がい者</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">子ども・若者</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">貧困</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">女性</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">病院・病気</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">文化・スポーツ</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">NPO・NGO支援</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">動物</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">災害・被災地支援</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">セルフヘルプ</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">その他</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">住所<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                〒<input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:20%; margin:0 5px 10px 5px;"><button class="mR10" style="width:90px; background-color: #ddd;"><span style="color:#000; font-size:14px">自動</span></button>
+                                    <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">なし</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">TEL<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:40%;">
+                                    <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">なし</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">FAX<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:40%;">
+                                    <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">なし</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">Email<span class="hissu">必須</span>    </th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:70%;">
+                                    <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">なし</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ウェブサイトURL</th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:70%;">
+                                    <label class="mR15 mL30"><input type="radio" name="r1" id=""> <span class="fontN">なし</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">非公開</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">団体紹介</th>
+                                <td class="col-xs-10 align-left">
+                                    <textarea type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                        <table class="table table-bordered" style="margin:0; background: #e1e6e6;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-12">▽TVACからの連絡先</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped" style="margin:0;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">ご担当者名</th>
+                                <td class="col-xs-10 align-left">
+                                    <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">TEL<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">Email<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <table class="table table-bordered" style="margin:0; background: #e1e6e6;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-12">▽管理ステータス<span class="red">（アルバイトさんは未調整から除外までしか選択できません。）</span></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped" style="margin:0;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">担当者</th>
+                                <td class="col-xs-10 align-left">山田　花子（自動表示）
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">ステータス<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="文面の調整、データくんIDの入力が済んだら、「調整済み」 にしてください。<br>
+アルバイトさんの段階で掲載候補から除外するときは「除外」にしてください"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p><span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                <p class="red">【重要】 必ず<button class="mR10 mL10" style="width:100px; background-color: #ddd;"><span style="color:#000; font-size:14px">プレビュー</span></button>して、 ページがきちんと表示されることを確認してから掲載してください。</p>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">未調整</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">調整済み</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">除外</span></label>
+                                    <span style="border-left:2px solid #b5b5b5; padding-left:20px;">
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">掲載</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">満了表示</span></label>
+                                    <label class="mR15"><input type="radio" name="r1" id=""> <span style="font-size:16px; font-weight:bold;">削除</span></label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">満了表示の文言<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="「情報修正依頼フォーム」 で募集終了表示のリクエストがあった場合、その文言を書いてください。<br>
+                                    標準の文言はワンクリックで入力できるようになっています。"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                    <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                    <button class="mR10" style="width:150px; background-color: #ddd;"><span style="color:#000; font-size:14px">←標準の文言を入力</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <table class="table table-bordered" style="margin:0; background:#e1e6e6;">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-12">▽ウェブサイト掲載項目（初期入力時には記入する必要ないです！）</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped mB30">
+                        <tbody class="group-table-body">
+                            <tr>
+                                <th class="col-xs-2">地域VC発情報</th>
+                                <td class="col-xs-10 align-left">
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">地域のボランティアセンター等からの情報ではない</span></label>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">である</span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">画像ファイル<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="JPG限定。既存の場合は上書きします。"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                <button class="mR10" style="width:140px; background-color: #ddd;"><span style="color:#000; font-size:14px">ファイルを選択</span></button>:</td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">今日のトピックス<p style="display:inline; margin-left:5px;" data-toggle="popover" data-placement="top" data-html="true" title="「今日のトピックス」 に掲載したい場合、掲載開始日時を入力してください。<br>
+入力例）「2015-12-19」 あるいは 「2015-12-19 10:30」"><img src="add/images/common/info.png" width="20" height="20" alt=""/></p></th>
+                                <td class="col-xs-10 align-left">
+                                <input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:60%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">トピックス用要約文</th>
+                                <td class="col-xs-10 align-left"><textarea type="text" class="form-control form-sizeS" id="" placeholder="" style="width:100%; margin:0;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="col-xs-2">掲載日時<span class="hissu">必須</span></th>
+                                <td class="col-xs-10 align-left">
+                                    <label class="mR15"><input type="radio" name="r1" id="" checked="checked"> <span class="fontN">今すぐ掲載</span></label><br>
+                                <label class="mR15"><input type="radio" name="r1" id=""> <span class="fontN">日時を指定して掲載</span></label><br>
+                                <div class="mB10">開始日<input type="text" name="" class="form-control form-sizeS datepicker" style="margin:0 10px 0 15px;"></div>
+                                開始時間<input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:10%; margin:0 5px 10px 16px;">時<input type="text" class="form-control form-sizeS" id="" placeholder="" style="width:10%; margin:0 5px 10px 30px;">分
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                        <div class="row edit-head" style="padding-bottom:10px;">
+                            <div class="col-xs-6"><a href=""><button class="btn btn-lg f-light" style="width:150px; background-color: #337ab7;"><span class="glyphicon glyphicon-chevron-left pull-left" style="color:#fff;"></span><span style="color:#FFF; margin-right:5px;">戻る</span></button></a></div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-lg f-right" data-toggle="modal" data-target="#modal" style="width:150px; background-color: #e7153f;"><span style="color:#FFF;">書き込み</span></button>
+                                <button class="f-right mR15" style="width:150px; padding:5px 0;"><span style="color:#333;">プレビュー</span></button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="margin-top:300px;">
+                                    <div class="modal-header" style="border:none;">
+                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                    </div>
+                                    <div class="modal-body" style="text-align:center; padding:15px 0 30px; font-size:20px;">
+                                        記事を更新しました
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+
+
+                </div>
+                </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+      $(function() {
+        $(".datepicker").datepicker();
+      });
+    </script>
+
+    <script>
+      $(function() {
+        $(".datepicker").datepicker();
+        $(".datepicker").datepicker("option", "showOn", 'both');
+        $(".datepicker").datepicker("option", "buttonImageOnly", true);
+        $(".datepicker").datepicker("option", "buttonImage", './add/images/common/ico_calendar.png');
+      });
+    </script>
+  <script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    })
+  </script>
+</body>
+
+</html>
